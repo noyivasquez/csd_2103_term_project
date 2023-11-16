@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--Group 3: Hano-i Jasleen Kiran Prashanna-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/stylelab_stylesheet.css">
+        <script src="https://code.jquery.com/jquery-1.12.3.min.js" ></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+        <script src="../js/login.js"></script>
+        <title>StyleLab - Log in</title>
+    </head>
+    <body>
+        <div id="banner">
+            <div class="toplinks">
+                <a href="login.html">Log in</a>|<a href="signup.html">Register</a>
+            </div>
+            <header>
+                <img src="../img/stylelab_logo.png" alt="StyleLab logo">
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="shop.html">SHOP</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                </ul>
+            </nav>
+        </div>
+    <main>
+        <h2 class="register">Log in</h2>
+        <form id="login_form" name="login_form" action="logged.html" method="post">
+            <table id="login">
+                <tbody>
+                    <tr>
+                        <td><label for="username">Username: </label></td>
+                        <td><input type="text" id="username" name="username"></td>
+                        <td><span id="username_error_message"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password: </label></td>
+                        <td><input type="password" id="password" name="password"></td>
+                        <td><span id="password_error_message"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="button" colspan="3"><input type="submit" value="Log in"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><p>If you haven't signed up, please register <a href="signup.html">here</a>.</p></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </main>
+    <footer>
+        <p>&COPY; Copyright 2022. All Rights Reserved.<br>
+        Vasquez - Kour - Budhathoki - Karki<br>
+        for CSD 2103 F2022</p>
+    </footer>  
+    </body>
+</html>

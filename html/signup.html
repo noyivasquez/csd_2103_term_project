@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--Group 3: Hano-i Jasleen Kiran Prashanna-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/stylelab_stylesheet.css">
+        <script src="https://code.jquery.com/jquery-1.12.3.min.js" ></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+        <title>StyleLab - Register</title>
+    </head>
+    <body>
+        <div id="banner">
+            <div class="toplinks">
+                <a href="login.html">Log in</a>|<a href="signup.html">Register</a>
+            </div>
+            <header>
+                <img src="../img/stylelab_logo.png" alt="StyleLab logo">
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="shop.html">SHOP</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                </ul>
+            </nav>
+        </div> 
+
+
+    <main>
+        <h2 class="register">Sign up to become a member</h2>
+        <form id="registration_form" name="registration_form" action="registered.html" method="post">
+        <table id="register">
+            <tbody>
+                <tr>
+                    <td><label for="first_name">First Name:</label></td>
+                    <td><input type="text" id="first_name" name="first_name"></td>
+                </tr>
+                <tr>
+                    <td><label for="last_name">Last Name:</label></td>
+                    <td><input type="text" id="last_name" name="last_name"></td>
+                </tr>
+                <tr>
+                    <td><label for="phone_num">Phone Number:</label></td>
+                    <td><input type="tel" id="phone_num" name="phone_num"></td>
+                </tr>
+                <tr>
+                    <td><label for="e_add">Email Address:</label></td>
+                    <td><input type="email" id="e_add" name="e_add"></td>
+                </tr>
+                <tr>
+                    <td><label for="username">Username:</label></td>
+                    <td><input type="text" id="username" name="username"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" id="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td><label for="c_password">Confirm password:</label></td>
+                    <td><input type="password" id="c_password" name="c_password"></td>
+                </tr>
+                <tr>
+                    <td class="button" colspan="2"><input type="submit" value="Register"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><p>If you already have an account, please log in <a href="login.html">here</a>.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        </form>
+        
+    </main>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $("#registration_form").validate({
+            rules: {
+                first_name: {
+                    required: true,
+                    minlength: 2
+                },
+                last_name: {
+                    required: true,
+                    minlength: 2
+                },
+                phone_num: {
+                    required: true,
+                    phoneUS: true
+                },
+                e_add: {
+                    required: true,
+                    email: true
+                },
+                username: {
+                    required: true,
+                    minlength: 5
+                },
+                password: {
+                    required: true,
+                    minlength: 8
+                },
+                c_password: {
+                    required: true,
+                    equalTo: password
+                }
+            },
+            messages: {
+                first_name: {
+                    required: "<br>Please enter your first name.",
+                    minlength: "<br>First name must be at least 2 characters."
+                },
+                last_name: {
+                    required: "<br>Please enter your last name.",
+                    minlength: "<br>Last name must be at least 2 characters."
+                },
+                phone_num: {
+                    required: "<br>Please enter your phone number.",
+                    phoneUS: "<br>Please enter a valid phone number."
+                },
+                e_add: {
+                    required: "<br>Please enter your email address.",
+                    email: "<br>Please enter a valid email address."
+                },
+                username: {
+                    required: "<br>Please enter your username.",
+                    minlength: "<br>Username must be at least 5 characters."
+                },
+                password: {
+                    required: "<br>Please enter your password.",
+                    minlength: "<br>Password must be at least 8 characters."
+                },
+                c_password: {
+                    required: "<br>Please re-type your password.",
+                    equalTo: "<br>Password should match the password above."
+                }
+
+            }
+        });
+    });
+    </script>
+    <footer>
+        <p>&COPY; Copyright 2022. All Rights Reserved.<br>
+        Vasquez - Kour - Budhathoki - Karki<br>
+        for CSD 2103 F2022</p>
+    </footer>  
+    </body>
+</html>

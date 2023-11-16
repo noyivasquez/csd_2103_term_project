@@ -1,0 +1,291 @@
+body {
+    background-color: #ccdcc1; 
+    color: #28190E;
+}
+
+#banner {
+    background-color: #dadee099;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+}
+
+.toplinks a {
+    text-decoration: none;
+    color: #d78258;
+    font-family: Helvetica, sans-serif;
+}
+
+nav ul {
+    padding: 1em;
+}
+
+nav li a {
+    text-decoration: none;
+    font-family: Roboto;
+    font-weight: bolder;
+}
+
+main {
+    background-color: #778979;
+    overflow: auto;
+    font-family:'Trebuchet MS', Verdana, sans-serif;
+    font-size: 1.1em;
+}
+
+main a {
+    color: #da4c05;
+}
+
+footer {
+    font-size: 0.75em;
+    text-align: center;
+    margin-top: 2em;
+}
+
+#registered {
+    text-align: center;
+}
+
+#logged {
+    text-align: center;
+}
+
+/* mobile viewport specifics */
+header img {
+    width: 60%;
+    margin: 1em;
+    opacity: 90%;
+}
+.toplinks {
+    text-align: center;
+    padding: 1em;
+}
+.toplinks a {
+    margin: 1em 0 0 0;
+    padding: 0.5em;
+}
+nav {
+    text-align: center;
+}
+nav li {
+    background-color: #9a9d9a99;
+    border-radius: 1em;
+    list-style-type: none;
+    margin: 0.3em;
+    padding: 0.4em;
+}
+nav li a {
+    color: #d87544;
+    text-align: center;
+}
+
+#aboutus {
+    text-align: center;
+    padding: 1em;
+}
+
+#contactus {
+    text-align: center;
+    padding: 1em;
+}
+
+#aboutus img {
+    margin: 1em;
+    width: 80%;
+}
+
+#contactus img {
+    margin: 1em;
+    width: 70%;
+}
+
+/*registration*/
+#register {
+    margin-left: auto;
+    margin-right: auto;
+}
+.register {
+    font-size: 2em;
+    background: linear-gradient(#ccdcc1, #778979) ;
+    padding: 20px;
+    text-align: center;
+    margin-top: 0;
+}
+#register td {
+    padding: 0.5em;
+}
+#register .button {
+    text-align: center;
+}
+#registration_form p {
+    font-size: 0.8em;
+}
+/*login*/
+#login {
+    margin-left: auto;
+    margin-right: auto;
+}
+#login td {
+    padding: 0.5em;
+}
+#login .button {
+    text-align: center;
+}
+#login_form p {
+    font-size: 0.8em;
+}
+/*user_info*/
+#user_info {
+    margin-left: auto;
+    margin-right: auto;
+}
+#user_info td {
+    padding: 0.5em;
+}
+.edit_button {
+    text-align: center;
+}
+
+/*Media query for tablet viewport targets screen size with a minimum width of 481px. */
+@media only screen and (min-width: 481px){
+    #banner {
+        background-image: url('../img/banner.jpg');
+        background-size: cover;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    header img {
+        width: 45%;
+        margin: 1em 3em;
+    }
+
+    header h1 a {
+        font-size: 150%;
+    }
+
+    .toplinks {
+        margin: 1em 1em 0 0;
+        padding: 0.5em;
+        text-align: right;
+    }
+
+    .toplinks a {
+        font-size: 90%
+    }
+
+    nav {
+        text-align: center;
+        margin: 0;
+        padding: 0.5em;
+    }
+
+    nav ul {
+        margin: 0 0 1em 0;
+    }
+
+    nav li {
+        background-color: #dadee099;
+        display: inline;
+        list-style-type: none;
+        margin: 0.5em;
+        padding: 0.5em;
+    }
+
+    nav li a {
+        font-size: 130%; 
+        color: #d78258;
+        ;
+    }
+    /*registration*/
+    #register {
+        margin: auto;
+    }
+}
+
+/*Media query for desktop viewport targets screen size with a minimum width of 769px. */
+@media only screen and (min-width: 769px){
+    #banner {
+        background-image: url('../img/banner.jpg');
+        background-size: cover;
+        overflow: auto;
+    }
+
+    header img {
+        float: left;
+        width: 200px;
+        margin: 1em 1em 4em 7em;
+    }
+    
+    .toplinks a {
+        font-size: 100%;
+    }
+
+    nav {
+        float: left;
+        text-align: left;
+        width: 25%;
+        margin: 0;
+    }
+
+    nav li {
+        display: block;
+        list-style-type: none;
+        margin: 0.3em;
+        padding: 0.5em;
+    }
+    
+    nav li a {
+        font-size: 190%; 
+        color: #d78258;
+    }
+    /*registration*/
+    #register {
+        margin: auto;
+    }
+
+    /*about us*/
+
+    #aboutus {
+        width: 70%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #aboutus::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+    #contactus {
+        width: 50%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #aboutus img {
+        width: 40%;
+        padding: 1em;
+    }
+
+    #caption p {
+        padding: 0.5em;
+        line-height: 150%;
+        font-size: 1.2em;
+    }
+
+    #contactus img {
+        width: 30%;
+        margin: 1em;
+    }
+}

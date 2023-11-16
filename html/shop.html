@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<!--Group 3: Hano-i Jasleen Kiran Prashanna-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/stylelab_shop_stylesheet.css">
+        <script src="https://code.jquery.com/jquery-1.12.3.min.js" ></script>
+        <script src="../js/shop.js"></script>
+
+        <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+        <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script>
+        $( function() {
+            $( "#tabs" ).tabs();
+        } );
+        </script>
+        <title>StyleLab - Shop</title>
+    </head>
+    <body>
+        <div id="banner">
+            <div class="toplinks">
+                <a href="login.html">Log in</a>|<a href="signup.html">Register</a>|<a href="user_info.html">Profile</a>
+            </div>
+            <header>
+                <img src="../img/stylelab_logo.png" alt="StyleLab logo">
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="shop.html">SHOP</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                </ul>
+            </nav>
+        </div>
+    <main>
+        <p id="cart"><span id="quant"></span> <img src="../img/bags-shopping.png" alt="shopping bag icon"></p>
+        <div id="tabs">
+            <ul>
+              <li><a href="#tabs-1">Women</a></li>
+              <li><a href="#tabs-2">Men</a></li>
+              <li><a href="#tabs-3">Kids</a></li>
+            </ul>
+            <div id="tabs-1">
+                <div id="row">
+                    <figure>
+                        <img src="../img/womens_bella.jpg" alt="Bella dress">
+                        <figcaption>
+                            <p class="prod_name">Bella</p>
+                            <p><i>New!</i></p>
+                            <p>Comes in colors:<br>
+                            <i>white, black</i></p>
+                            <p class="deet"><i>*white in picture</i></p>
+                            <p>Sizes available:<br>
+                            <i>S, M, L</i></p>
+                            <p class="deet"><label for="bella_size">Size: </label>
+                                <select id="bella_size" name="bella_size">
+                                    <option value="">Select</option>
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                </select>
+                            </p>
+                            <p class="deet"><label for="bella_color">Color: </label>
+                                <select id="bella_color" name="bella_color">
+                                    <option value="">Select</option>
+                                    <option value="white">white</option>
+                                    <option value="black">black</option>
+                                </select>
+                            </p>
+                            <br>
+                            <p><button type="button" onclick="returnBella()">-</button> <span id="bella_stock">10</span> <button type="button" onclick="addBella()">+</button></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../img/womens_nadine.jpg" alt="Nadine shorts">
+                        <figcaption>
+                            <p class="prod_name">Nadine</p>
+                            <p><i>New!</i></p>
+                            <p>Comes in colors:<br>
+                            <i>white, nude, brown</i></p>
+                            <p class="deet"><i>*white in picture</i></p>
+                            <p>Sizes available:<br>
+                            <i>S, M, L</i></p>
+                            <p class="deet"><label for="nadine_size">Size: </label>
+                                <select id="nadine_size" name="nadine_size">
+                                    <option value="">Select</option>
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                </select>
+                            </p>
+                            <p class="deet"><label for="nadine_color">Color: </label>
+                                <select id="nadine_color" name="nadine_color">
+                                    <option value="">Select</option>
+                                    <option value="white">white</option>
+                                    <option value="nude">nude</option>
+                                    <option value="brown">brown</option>
+                                </select>
+                            </p>
+                            <br>
+                            <p><button type="button" onclick="returnNadine()">-</button> <span id="nadine_stock">10</span> <button type="button" onclick="addNadine()">+</button></p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div id="row">
+                    <figure>
+                        <img src="../img/womens_roni.jpg" alt="Roni shirt">
+                        <figcaption>
+                            <p class="prod_name">Roni</p>
+                            <p><i>100% cotton</i><br>
+                            <p>Comes in colors:<br>
+                            <i>nude, black, white</i></p>
+                            <p class="deet"><i>*nude in picture</i></p>
+                            <p>Sizes available:<br>
+                            <i>S, M, L</i></p>
+                            <p class="deet"><label for="roni_size">Size: </label>
+                                <select id="roni_size" name="roni_size">
+                                    <option value="">Select</option>
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                </select>
+                            </p>
+                            <p class="deet"><label for="roni_color">Color: </label>
+                                <select id="roni_color" name="roni_color">
+                                    <option value="">Select</option>
+                                    <option value="nude">nude</option>
+                                    <option value="black">black</option>
+                                    <option value="white">white</option>
+                                </select>
+                            </p>
+                            <p><button type="button" onclick="returnRoni()">-</button> <span id="roni_stock">10</span> <button type="button" onclick="addRoni()">+</button></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../img/womens_aubrey.jpg" alt="Aubrey blazer">
+                        <figcaption>
+                            <p class="prod_name">Aubrey</p>
+                            <p><i>organic materials</i></p>
+                            <p>Comes in colors:<br>
+                            <i>pink, light green</i></p>
+                            <p>Sizes available:<br>
+                            <i>S, M, L</i></p>
+                            <p class="deet"><label for="aubrey_size">Size: </label>
+                                <select id="aubrey_size" name="aubrey_size">
+                                    <option value="">Select</option>
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                </select>
+                            </p>
+                            <p class="deet"><label for="aubrey_color">Color: </label>
+                                <select id="aubrey_color" name="aubrey_color">
+                                    <option value="">Select</option>
+                                    <option value="pink">pink</option>
+                                    <option value="l_green">light green</option>
+                                </select>
+                            </p>
+                            <p><button type="button" onclick="returnAubrey()">-</button> <span id="aubrey_stock">10</span> <button type="button" onclick="addAubrey()">+</button></p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div id="row">
+                    <figure>
+                        <img src="../img/womens_ellie.jpg" alt="Ellie dress">
+                        <figcaption>
+                            <p class="prod_name">Ellie</p>
+                            <p><i>long-sleeved and maxi</i></p>
+                            <p>Comes in colors:<br>
+                            <i>cream, blue</i></p>
+                            <p class="deet"><i>*cream in picture</i></p>
+                            <p>Sizes available:<br>
+                            <i>S, M, L</i></p>
+                            <p class="deet"><label for="ellie_size">Size: </label>
+                                <select id="ellie_size" name="ellie_size">
+                                    <option value="">Select</option>
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                </select>
+                            </p>
+                            <p class="deet"><label for="ellie_color">Color: </label>
+                                <select id="ellie_color" name="ellie_color">
+                                    <option value="">Select</option>
+                                    <option value="cream">cream</option>
+                                    <option value="blue">blue</option>
+                                </select>
+                            </p>
+                            <p><button type="button" onclick="returnEllie()">-</button> <span id="ellie_stock">10</span> <button type="button" onclick="addEllie()">+</button></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../img/womens_yanna.jpg" alt="Yanna skirt">
+                        <figcaption>
+                            <p class="prod_name">Yanna</p>
+                            <p><i>with inner shorts</i></p>
+                            <p>Comes in colors:<br>
+                            <i>black, navy blue</i></p>
+                            <p class="deet"><i>*black in picture</i></p>
+                            <p>Sizes available:<br>
+                            <i>S, M, L</i></p>
+                            <p class="deet"><label for="yanna_size">Size: </label>
+                                <select id="yanna_size" name="yanna_size">
+                                    <option value="">Select</option>
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                </select>
+                            </p>
+                            <p class="deet"><label for="yanna_color">Color: </label>
+                                <select id="yanna_color" name="yanna_color">
+                                    <option value="">Select</option>
+                                    <option value="black">black</option>
+                                    <option value="n_blue">navy blue</option>
+                                </select>
+                            </p>
+                            <p><button type="button" onclick="returnYanna()">-</button> <span id="yanna_stock">10</span> <button type="button" onclick="addYanna()">+</button></p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="tabs-2">
+                <div id="row">
+                    <figure>
+                        <img src="../img/mens_hiro.jpg" alt="Hiro kimono">
+                        <figcaption>
+                            <p class="prod_name">Hiro</p>
+                            <p><i>New!</i></p>
+                            <p>Comes in colors:<br>
+                            <i>green, blue, brown</i></p>
+                            <p class="deet"><i>*green in picture</i></p>
+                            <p>Sizes available:<br>
+                            <i>S, M, L</i></p>
+                            <p class="deet"><label for="hiro_size">Size: </label>
+                                <select id="hiro_size" name="hiro_size">
+                                    <option value="">Select</option>
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                </select>
+                            </p>
+                            <p class="deet"><label for="hiro_color">Color: </label>
+                                <select id="hiro_color" name="hiro_color">
+                                    <option value="">Select</option>
+                                    <option value="green">green</option>
+                                    <option value="blue">blue</option>
+                                    <option value="brown">brown</option>
+                                </select>
+                            </p>
+                            <p><button type="button" onclick="returnHiro()">-</button> <span id="hiro_stock">10</span> <button type="button" onclick="addHiro()">+</button></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../img/mens_connor.jpg" alt="Connor shorts">
+                        <figcaption>
+                            <p class="prod_name">Connor</p>
+                            <p><i>New!</i></p>
+                            <p>Comes in colors:<br>
+                            <i>light blue, dark blue</i></p>
+                            <p class="deet"><i>*light blue in picture</i></p>
+                            <p>Sizes available:<br>
+                            <i>S, M, L</i></p>
+                            <p class="deet"><label for="connor_size">Size: </label>
+                                <select id="connor_size" name="connor_size">
+                                    <option value="">Select</option>
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                </select>
+                            </p>
+                            <p class="deet"><label for="connor_color">Color: </label>
+                                <select id="connor_color" name="connor_color">
+                                    <option value="">Select</option>
+                                    <option value="l_blue">light blue</option>
+                                    <option value="d_blue">dark blue</option>
+                                </select>
+                            </p>
+                            <p><button type="button" onclick="returnConnor()">-</button> <span id="connor_stock">10</span> <button type="button" onclick="addConnor()">+</button></p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div id="row">
+                    <figure>
+                        <img src="../img/mens_blake.jpg" alt="Blake shorts">
+                        <figcaption>
+                            <p class="prod_name">Blake</p>
+                            <p><i>get ready for summer</i></p>
+                            <p>Comes in colors:<br>
+                            <i>yellow, green-yellow stripes, green</i></p>
+                            <p class="deet"><i>*green-yellow stripes in picture</i></p>
+                            <p>Sizes available:<br>
+                            <i>S, M, L</i></p>
+                            <p class="deet"><label for="blake_size">Size: </label>
+                                <select id="blake_size" name="blake_size">
+                                    <option value="">Select</option>
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                </select>
+                            </p>
+                            <p class="deet"><label for="blake_color">Color: </label>
+                                <select id="blake_color" name="blake_color">
+                                    <option value="">Select</option>
+                                    <option value="yellow">yellow</option>
+                                    <option value="y_g">green-yellow</option>
+                                    <option value="green">green</option>
+                                </select>
+                            </p>
+                            <p><button type="button" onclick="returnBlake()">-</button> <span id="blake_stock">10</span> <button type="button" onclick="addBlake()">+</button></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../img/mens_pete.jpg" alt="Pete buttondown shirt">
+                        <figcaption>
+                            <p class="prod_name">Pete</p>
+                            <p><i>look good rolled up or cufflinked</i></p>
+                            <p>Comes in colors:<br>
+                            <i>black, white, light blue</i></p>
+                            <p class="deet"><i>*black in picture</i></p>
+                            <p>Sizes available:<br>
+                            <i>S, M, L</i></p>
+                            <p class="deet"><label for="pete_size">Size: </label>
+                                <select id="pete_size" name="pete_size">
+                                    <option value="">Select</option>
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                </select>
+                            </p>
+                            <p class="deet"><label for="pete_color">Color: </label>
+                                <select id="pete_color" name="pete_color">
+                                    <option value="">Select</option>
+                                    <option value="black">black</option>
+                                    <option value="white">white</option>
+                                    <option value="l_blue">light blue</option>
+                                </select>
+                            </p>
+                            <p><button type="button" onclick="returnPete()">-</button> <span id="pete_stock">10</span> <button type="button" onclick="addPete()">+</button></p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div id="row">
+                    <figure>
+                        <img src="../img/mens_andre.jpg" alt="Andre shirt">
+                        <figcaption>
+                            <p class="prod_name">Andre</p>
+                            <p><i>a closet staple</i></p>
+                            <p>Comes in colors:<br>
+                            <i>white, nude, green</i></p>
+                            <p class="deet"><i>*white in picture</i></p>
+                            <p>Sizes available:<br>
+                            <i>S, M, L</i></p>
+                            <p class="deet"><label for="andre_size">Size: </label>
+                                <select id="andre_size" name="andre_size">
+                                    <option value="">Select</option>
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                </select>
+                            </p>
+                            <p class="deet"><label for="andre_color">Color: </label>
+                                <select id="andre_color" name="andre_color">
+                                    <option value="">Select</option>
+                                    <option value="white">white</option>
+                                    <option value="nude">nude</option>
+                                    <option value="green">green</option>
+                                </select>
+                            </p>
+                            <p><button type="button" onclick="returnAndre()">-</button> <span id="andre_stock">10</span> <button type="button" onclick="addAndre()">+</button></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../img/mens_arthur.jpg" alt="Arthur shirt">
+                        <figcaption>
+                            <p class="prod_name">Arthur</p>
+                            <p><i>never out of style</i></p>
+                            <p>Comes in colors:<br>
+                            <i>black, white</i></p>
+                            <p class="deet"><i>*black in picture</i></p>
+                            <p>Sizes available:<br>
+                            <i>S, M, L</i></p>
+                            <p class="deet"><label for="arthur_size">Size: </label>
+                                <select id="arthur_size" name="arthur_size">
+                                    <option value="">Select</option>
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                </select>
+                            </p>
+                            <p class="deet"><label for="arthur_color">Color: </label>
+                                <select id="arthur_color" name="arthur_color">
+                                    <option value="">Select</option>
+                                    <option value="black">black</option>
+                                    <option value="white">white</option>
+                                </select>
+                            </p>
+                            <p><button type="button" onclick="returnArthur()">-</button> <span id="arthur_stock">10</span> <button type="button" onclick="addArthur()">+</button></p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="tabs-3">
+                <div id="row">
+                    <figure>
+                        <img src="../img/kids_elsa.jpg" alt="Elsa headband">
+                        <figcaption>
+                            <p class="prod_name">Elsa</p>
+                            <p><i>New!</i></p>
+                            <p>Comes in colors:<br>
+                            <i>white, blue, red</i></p>
+                            <p class="deet"><i>*blue in picture</i></p>
+                            <p>Only one size availabe</p>
+                            <p class="deet"><label for="elsa_color">Color: </label>
+                                <select id="elsa_color" name="elsa_color">
+                                    <option value="">Select</option>
+                                    <option value="white">white</option>
+                                    <option value="blue">blue</option>
+                                    <option value="red">red</option>
+                                </select>
+                            </p>
+                            <p><button type="button" onclick="returnElsa()">-</button> <span id="elsa_stock">10</span> <button type="button" onclick="addElsa()">+</button></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../img/kids_tyler.jpg" alt="Tyler beanie">
+                        <figcaption>
+                            <p class="prod_name">Tyler</p>
+                            <p><i>New!</i></p>
+                            <p>Comes in colors:<br>
+                            <i>blue, green, red</i></p>
+                            <p class="deet"><i>*red in picture</i></p>
+                            <p>Only one size availabe</p>
+                            <p class="deet"><label for="tyler_color">Color: </label>
+                                <select id="tyler_color" name="tyler_color">
+                                    <option value="">Select</option>
+                                    <option value="blue">blue</option>
+                                    <option value="green">green</option>
+                                    <option value="red">red</option>
+                                </select>
+                            </p>
+                            <p><button type="button" onclick="returnTyler()">-</button> <span id="tyler_stock">10</span> <button type="button" onclick="addTyler()">+</button></p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div id="row">
+                    <figure>
+                        <img src="../img/kids_tori.jpg" alt="Tori sandals">
+                        <figcaption>
+                            <p class="prod_name">Tori</p>
+                            <p><i>secure and comfy</i></p>
+                            <p>Comes in colors:<br>
+                            <i>white, nude, pink</i></p>
+                            <p class="deet"><i>*nude in picture</i></p>
+                            <p>Sizes available:<br>
+                            <i>15cm, 16cm, 17cm</i></p>
+                            <p class="deet"><label for="tori_size">Size: </label>
+                                <select id="tori_size" name="tori_size">
+                                    <option value="">Select</option>
+                                    <option value="15">15 cm</option>
+                                    <option value="16">16 cm</option>
+                                    <option value="17">17 cm</option>
+                                </select>
+                            </p>
+                            <p class="deet"><label for="tori_color">Color: </label>
+                                <select id="tori_color" name="tori_color">
+                                    <option value="">Select</option>
+                                    <option value="white">white</option>
+                                    <option value="nude">nude</option>
+                                    <option value="pink">pink</option>
+                                </select>
+                            </p>
+                            <p><button type="button" onclick="returnTori()">-</button> <span id="tori_stock">10</span> <button type="button" onclick="addTori()">+</button></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../img/kids_jake.jpg" alt="Jake flannel shirt">
+                        <figcaption>
+                            <p class="prod_name">Jake</p>
+                            <p><i>look cool, stay warm</i></p>
+                            <p>Comes in colors:<br>
+                            <i>brown, green</i></p>
+                            <p class="deet"><i>*brown in picture</i></p>
+                            <p>Sizes available<br>
+                            <i>S, M, L</i></p>
+                            <p class="deet"><label for="jake_size">Size: </label>
+                                <p class="deet"><label for="jake_size">Size: </label>
+                                <select id="jake_size" name="jake_size">
+                                    <option value="">Select</option>
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                </select>
+                            </p>
+                            </p>
+                            <p class="deet"><label for="jake_color">Color: </label>
+                                <select id="jake_color" name="jake_color">
+                                    <option value="">Select</option>
+                                    <option value="brown">brown</option>
+                                    <option value="green">green</option>
+                                </select>
+                            </p>
+                            <p><button type="button" onclick="returnJake()">-</button> <span id="jake_stock">10</span> <button type="button" onclick="addJake()">+</button></p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div id="row">
+                    <figure>
+                        <img src="../img/kids_charlotte.jpg" alt="Charlotte collared top">
+                        <figcaption>
+                            <p class="prod_name">Charlotte</p>
+                            <p><i>pastel perfect</i></p>
+                            <p>Comes in colors:<br>
+                            <i>pink, yellow</i></p>
+                            <p class="deet"><i>*pink and yellow in picture</i></p>
+                            <p>Sizes available:<br>
+                            <i>S, M, L</i></p>
+                            <p class="deet"><label for="charlotte_size">Size: </label>
+                                <select id="charlotte_size" name="charlotte_size">
+                                    <option value="">Select</option>
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                </select>
+                            </p>
+                            <p class="deet"><label for="charlotte_color">Color: </label>
+                                <select id="charlotte_color" name="charlotte_color">
+                                    <option value="">Select</option>
+                                    <option value="yellow">yellow</option>
+                                    <option value="pink">pink</option>
+                                </select>
+                            </p>
+                            <p><button type="button" onclick="returnCharlotte()">-</button> <span id="charlotte_stock">10</span> <button type="button" onclick="addCharlotte()">+</button></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../img/kids_alex.jpg" alt="Alex sneakers">
+                        <figcaption>
+                            <p class="prod_name">Alex</p>
+                            <p><i>make it a kid's must-have too</i></p>
+                            <p>Only available in white</p>
+                            <p>Sizes available:<br>
+                            <i>15cm, 16cm, 17cm</i></p>
+                            <p class="deet"><label for="alex_size">Size: </label>
+                                <select id="alex_size" name="alex_size">
+                                    <option value="">Select</option>
+                                    <option value="15">15 cm</option>
+                                    <option value="16">16 cm</option>
+                                    <option value="17">17 cm</option>
+                                </select>
+                            </p>
+                            <p><button type="button" onclick="returnAlex()">-</button> <span id="alex_stock">10</span> <button type="button" onclick="addAlex()">+</button></p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <p class="end"><a href="shop.html#banner">Back to top</a></p>
+        </div>
+    </main>
+    <footer>
+        <p>&COPY; Copyright 2022. All Rights Reserved.<br>
+        Vasquez - Kour - Budhathoki - Karki<br>
+        for CSD 2103 F2022</p>
+    </footer>  
+    </body>
+</html>

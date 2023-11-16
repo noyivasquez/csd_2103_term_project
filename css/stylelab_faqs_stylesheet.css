@@ -1,0 +1,236 @@
+#accordion {
+    width: 80%;
+    margin: 3em auto;
+}
+
+#accordion .ui-accordion-content {
+    background-color: #dadee0;
+    color: #28190E;
+    font-size: 1em;
+}
+
+#accordion .ui-accordion-content a {
+    color: #d87544;
+}
+
+#accordion .ui-accordion-header {
+    background: transparent; 
+    border: none; 
+    border-bottom: 1px solid #28190E; 
+    -moz-border-radius: 0px; 
+    -webkit-border-radius: 0px; 
+    border-radius: 0px;
+}
+
+#accordion .ui-state-default { 
+    color: #dadee0; 
+    text-shadow: 0 0, 0 0 , 0.3px 0 #d78258, 0 -0.3px #d78258;
+    font-size: 1.25em;
+}
+
+#accordion .ui-state-active {
+    color: #28190E;
+    text-shadow: 0 0;
+}
+
+#accordion .ui-accordion-header  .ui-icon {
+    background: transparent url(../img/angle-small-right.png)
+}
+
+/* by group 3 */
+
+body {
+    background-color: #ccdcc1; 
+    color: #28190E;
+}
+
+#banner {
+    background-color: #dadee0;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+}
+
+.toplinks a {
+    text-decoration: none;
+    color: #d78258;
+    font-family: Helvetica, sans-serif;
+}
+
+nav ul {
+    padding: 1em;
+}
+
+nav li a {
+    text-decoration: none;
+    font-family: Roboto;
+    font-weight: bolder;
+}
+
+main {
+    background-color: #778979;
+    overflow: auto;
+    font-family:'Trebuchet MS', Verdana, sans-serif;
+    font-size: 1em;
+}
+
+main a {
+    color: #da4c05;
+}
+
+footer {
+    font-size: 0.75em;
+    text-align: center;
+    margin-top: 2em;
+}
+
+
+
+/* mobile viewport specifics */
+header img {
+    width: 60%;
+    margin: 1em;
+    opacity: 90%;
+}
+.toplinks {
+    text-align: center;
+    padding: 1em;
+}
+.toplinks a {
+    margin: 1em 0 0 0;
+    padding: 0.5em;
+}
+nav {
+    text-align: center;
+}
+nav li {
+    background-color: #9a9d9a99;
+    border-radius: 1em;
+    list-style-type: none;
+    margin: 0.3em;
+    padding: 0.4em;
+}
+nav li a {
+    color: #d87544;
+    text-align: center;
+}
+
+dt {
+    padding: 0.5em;
+}
+
+dd {
+    padding: 0 0 1em 0;
+}
+
+
+/*Media query for tablet viewport targets screen size with a minimum width of 481px. */
+@media only screen and (min-width: 481px){
+    #banner {
+        background-image: url('../img/banner.jpg');
+        background-size: cover;
+    }
+
+    main {
+        font-size: .8em;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    header img {
+        width: 45%;
+        margin: 1em 3em;
+    }
+
+    header h1 a {
+        font-size: 150%;
+    }
+
+    .toplinks {
+        margin: 1em 1em 0 0;
+        padding: 0.5em;
+        text-align: right;
+    }
+
+    .toplinks a {
+        font-size: 90%
+    }
+
+    nav {
+        text-align: center;
+        margin: 0;
+        padding: 0.5em;
+    }
+
+    nav ul {
+        margin: 0 0 1em 0;
+    }
+
+    nav li {
+        background-color: #dadee099;
+        display: inline;
+        list-style-type: none;
+        margin: 0.5em;
+        padding: 0.5em;
+    }
+
+    nav li a {
+        font-size: 130%; 
+        color: #d78258;
+    }
+
+    #accordion .ui-tabs-nav .ui-state-default a {
+        font-size: 1.25em;
+    }
+
+}
+
+/*Media query for desktop viewport targets screen size with a minimum width of 769px. */
+@media only screen and (min-width: 769px){
+    #banner {
+        background-image: url('../img/banner.jpg');
+        background-size: cover;
+        overflow: auto;
+    }
+
+    main {
+        font-size: 1em;
+    }
+
+    header img {
+        float: left;
+        width: 200px;
+        margin: 1em 1em 4em 7em;
+    }
+    
+    .toplinks a {
+        font-size: 100%;
+    }
+
+    nav {
+        float: left;
+        text-align: left;
+        width: 25%;
+        margin: 0;
+    }
+
+    nav li {
+        display: block;
+        list-style-type: none;
+        margin: 0.3em;
+        padding: 0.5em;
+    }
+    
+    nav li a {
+        font-size: 190%; 
+        color: #d78258;
+    }
+
+    #accordion .ui-tabs-nav .ui-state-default a {
+        font-size: 1.5em;
+    }
+}
